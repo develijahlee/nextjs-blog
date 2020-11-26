@@ -8,6 +8,10 @@ body {
   font-size: 18px;
 }
 
+.container {
+  background: red;
+}
+
 * {
   box-sizing: border-box;
 }
