@@ -3,15 +3,6 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -41,4 +32,14 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  console.log(allPostsData);
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
